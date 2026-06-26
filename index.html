@@ -11,7 +11,7 @@
     header p { margin:4px 0; color:#d1d5db; }
     main { padding:26px 36px 44px; }
     a { color:#2563eb; text-decoration:none; font-weight:600; }
-    .sector-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(360px,1fr)); gap:16px; margin-bottom:26px; }
+    .sector-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(760px,1fr)); gap:16px; margin-bottom:26px; }
     .strategy-bar { display:flex; gap:12px; align-items:center; flex-wrap:wrap; background:white; border:1px solid #e5e7eb; border-radius:8px; padding:12px 14px; margin-bottom:18px; }
     .strategy-bar button { height:34px; border:1px solid #cfd6df; border-radius:6px; background:#111827; color:white; padding:0 12px; cursor:pointer; }
     .strategy-bar select { height:34px; min-width:290px; border:1px solid #cfd6df; border-radius:6px; padding:0 10px; background:white; }
@@ -23,6 +23,8 @@
     th, td { border-bottom:1px solid #edf0f3; padding:8px 10px; text-align:right; white-space:nowrap; font-size:13px; }
     th:first-child, td:first-child { text-align:left; }
     .stock-table thead th { background:#fafafa; color:#52606d; }
+    .stock-scroll { overflow-x:auto; }
+    .stock-table { min-width:760px; }
     .stock-table th, .stock-table td { min-width:72px; }
     .stock-table th:first-child, .stock-table td:first-child { min-width:82px; }
     .strategy-col.is-hidden { display:none; }
@@ -60,9 +62,10 @@
                 <h2>PCB材料</h2>
                 <a href="sectors/pcb-materials.html">进入交互K线</a>
               </div>
-              <table class="stock-table">
-                <thead><tr><th>股票名称</th><th>代码</th><th>当前价</th><th>最新涨跌幅</th><th class="strategy-col">买入次数</th><th class="strategy-col">卖出次数</th><th class="strategy-col">上涨次数比例</th><th class="strategy-col">平均涨跌幅</th><th class="strategy-col">最大上涨</th><th class="strategy-col">最大下跌</th></tr></thead>
-                <tbody><tr>
+              <div class="stock-scroll">
+                <table class="stock-table">
+                  <thead><tr><th>股票名称</th><th>代码</th><th>当前价</th><th>最新涨跌幅</th><th class="strategy-col">买入次数</th><th class="strategy-col">卖出次数</th><th class="strategy-col">上涨次数比例</th><th class="strategy-col">平均涨跌幅</th><th class="strategy-col">最大上涨</th><th class="strategy-col">最大下跌</th></tr></thead>
+                  <tbody><tr>
                   <td><a href="sectors/pcb-materials.html?stock=002141.SZ">贤丰控股</a></td>
                   <td>002141.SZ</td>
                   <td>5.76</td>
@@ -162,15 +165,17 @@
                   <td class="strategy-col" style="color:#8f1212;background:rgba(220,38,38,0.305);font-weight:600;">+17.08%</td>
                   <td class="strategy-col" style="color:#8f1212;background:rgba(220,38,38,0.305);font-weight:600;">+17.08%</td>
                 </tr></tbody>
-              </table>
+                </table>
+              </div>
             </section><section class="sector-card">
               <div class="sector-head">
                 <h2>半导体</h2>
                 <a href="sectors/semiconductor.html">进入交互K线</a>
               </div>
-              <table class="stock-table">
-                <thead><tr><th>股票名称</th><th>代码</th><th>当前价</th><th>最新涨跌幅</th><th class="strategy-col">买入次数</th><th class="strategy-col">卖出次数</th><th class="strategy-col">上涨次数比例</th><th class="strategy-col">平均涨跌幅</th><th class="strategy-col">最大上涨</th><th class="strategy-col">最大下跌</th></tr></thead>
-                <tbody><tr>
+              <div class="stock-scroll">
+                <table class="stock-table">
+                  <thead><tr><th>股票名称</th><th>代码</th><th>当前价</th><th>最新涨跌幅</th><th class="strategy-col">买入次数</th><th class="strategy-col">卖出次数</th><th class="strategy-col">上涨次数比例</th><th class="strategy-col">平均涨跌幅</th><th class="strategy-col">最大上涨</th><th class="strategy-col">最大下跌</th></tr></thead>
+                  <tbody><tr>
                   <td><a href="sectors/semiconductor.html?stock=002119.SZ">康强电子</a></td>
                   <td>002119.SZ</td>
                   <td>37.02</td>
@@ -259,15 +264,17 @@
                   <td class="strategy-col" style="color:#8f1212;background:rgba(220,38,38,0.442);font-weight:600;">+28.52%</td>
                   <td class="strategy-col" style="color:#16803c;background:rgba(22,163,74,0.171);font-weight:500;">-5.93%</td>
                 </tr></tbody>
-              </table>
+                </table>
+              </div>
             </section><section class="sector-card">
               <div class="sector-head">
                 <h2>商业航天</h2>
                 <a href="sectors/commercial-space.html">进入交互K线</a>
               </div>
-              <table class="stock-table">
-                <thead><tr><th>股票名称</th><th>代码</th><th>当前价</th><th>最新涨跌幅</th><th class="strategy-col">买入次数</th><th class="strategy-col">卖出次数</th><th class="strategy-col">上涨次数比例</th><th class="strategy-col">平均涨跌幅</th><th class="strategy-col">最大上涨</th><th class="strategy-col">最大下跌</th></tr></thead>
-                <tbody><tr>
+              <div class="stock-scroll">
+                <table class="stock-table">
+                  <thead><tr><th>股票名称</th><th>代码</th><th>当前价</th><th>最新涨跌幅</th><th class="strategy-col">买入次数</th><th class="strategy-col">卖出次数</th><th class="strategy-col">上涨次数比例</th><th class="strategy-col">平均涨跌幅</th><th class="strategy-col">最大上涨</th><th class="strategy-col">最大下跌</th></tr></thead>
+                  <tbody><tr>
                   <td><a href="sectors/commercial-space.html?stock=001270.SZ">铖昌科技</a></td>
                   <td>001270.SZ</td>
                   <td>139.43</td>
@@ -367,15 +374,17 @@
                   <td class="strategy-col" style=""></td>
                   <td class="strategy-col" style=""></td>
                 </tr></tbody>
-              </table>
+                </table>
+              </div>
             </section><section class="sector-card">
               <div class="sector-head">
                 <h2>存储芯片</h2>
                 <a href="sectors/memory-chip.html">进入交互K线</a>
               </div>
-              <table class="stock-table">
-                <thead><tr><th>股票名称</th><th>代码</th><th>当前价</th><th>最新涨跌幅</th><th class="strategy-col">买入次数</th><th class="strategy-col">卖出次数</th><th class="strategy-col">上涨次数比例</th><th class="strategy-col">平均涨跌幅</th><th class="strategy-col">最大上涨</th><th class="strategy-col">最大下跌</th></tr></thead>
-                <tbody><tr>
+              <div class="stock-scroll">
+                <table class="stock-table">
+                  <thead><tr><th>股票名称</th><th>代码</th><th>当前价</th><th>最新涨跌幅</th><th class="strategy-col">买入次数</th><th class="strategy-col">卖出次数</th><th class="strategy-col">上涨次数比例</th><th class="strategy-col">平均涨跌幅</th><th class="strategy-col">最大上涨</th><th class="strategy-col">最大下跌</th></tr></thead>
+                  <tbody><tr>
                   <td><a href="sectors/memory-chip.html?stock=000021.SZ">深科技</a></td>
                   <td>000021.SZ</td>
                   <td>53.51</td>
@@ -464,15 +473,17 @@
                   <td class="strategy-col" style="color:#b91c1c;background:rgba(220,38,38,0.102);font-weight:500;">+0.21%</td>
                   <td class="strategy-col" style="color:#b91c1c;background:rgba(220,38,38,0.102);font-weight:500;">+0.21%</td>
                 </tr></tbody>
-              </table>
+                </table>
+              </div>
             </section><section class="sector-card">
               <div class="sector-head">
                 <h2>玻璃基板</h2>
                 <a href="sectors/glass-substrate.html">进入交互K线</a>
               </div>
-              <table class="stock-table">
-                <thead><tr><th>股票名称</th><th>代码</th><th>当前价</th><th>最新涨跌幅</th><th class="strategy-col">买入次数</th><th class="strategy-col">卖出次数</th><th class="strategy-col">上涨次数比例</th><th class="strategy-col">平均涨跌幅</th><th class="strategy-col">最大上涨</th><th class="strategy-col">最大下跌</th></tr></thead>
-                <tbody><tr>
+              <div class="stock-scroll">
+                <table class="stock-table">
+                  <thead><tr><th>股票名称</th><th>代码</th><th>当前价</th><th>最新涨跌幅</th><th class="strategy-col">买入次数</th><th class="strategy-col">卖出次数</th><th class="strategy-col">上涨次数比例</th><th class="strategy-col">平均涨跌幅</th><th class="strategy-col">最大上涨</th><th class="strategy-col">最大下跌</th></tr></thead>
+                  <tbody><tr>
                   <td><a href="sectors/glass-substrate.html?stock=000100.SZ">TCL科技</a></td>
                   <td>000100.SZ</td>
                   <td>5.40</td>
@@ -583,15 +594,17 @@
                   <td class="strategy-col" style="color:#8f1212;background:rgba(220,38,38,0.313);font-weight:600;">+17.73%</td>
                   <td class="strategy-col" style="color:#16803c;background:rgba(22,163,74,0.130);font-weight:500;">-2.53%</td>
                 </tr></tbody>
-              </table>
+                </table>
+              </div>
             </section><section class="sector-card">
               <div class="sector-head">
                 <h2>算力金属</h2>
                 <a href="sectors/compute-metals.html">进入交互K线</a>
               </div>
-              <table class="stock-table">
-                <thead><tr><th>股票名称</th><th>代码</th><th>当前价</th><th>最新涨跌幅</th><th class="strategy-col">买入次数</th><th class="strategy-col">卖出次数</th><th class="strategy-col">上涨次数比例</th><th class="strategy-col">平均涨跌幅</th><th class="strategy-col">最大上涨</th><th class="strategy-col">最大下跌</th></tr></thead>
-                <tbody><tr>
+              <div class="stock-scroll">
+                <table class="stock-table">
+                  <thead><tr><th>股票名称</th><th>代码</th><th>当前价</th><th>最新涨跌幅</th><th class="strategy-col">买入次数</th><th class="strategy-col">卖出次数</th><th class="strategy-col">上涨次数比例</th><th class="strategy-col">平均涨跌幅</th><th class="strategy-col">最大上涨</th><th class="strategy-col">最大下跌</th></tr></thead>
+                  <tbody><tr>
                   <td><a href="sectors/compute-metals.html?stock=000657.SZ">中钨高新</a></td>
                   <td>000657.SZ</td>
                   <td>99.51</td>
@@ -680,7 +693,8 @@
                   <td class="strategy-col" style="color:#8f1212;background:rgba(220,38,38,0.392);font-weight:600;">+24.32%</td>
                   <td class="strategy-col" style="color:#16803c;background:rgba(22,163,74,0.161);font-weight:500;">-5.10%</td>
                 </tr></tbody>
-              </table>
+                </table>
+              </div>
             </section></section>
     <div class="weekly-title">
       <h2>近一年每周涨跌幅矩阵</h2>
