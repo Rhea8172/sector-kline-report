@@ -63,14 +63,23 @@
     const strategySelect = document.getElementById("strategy");
     const summary = document.getElementById("summary");
     const maToggles = Array.from(document.querySelectorAll(".ma-toggle"));
+    function num(v) { return Number.isFinite(Number(v)) ? Number(v) : null; }
+    function fmt(v, digits = 2) {
+      const n = num(v);
+      return n === null ? "--" : n.toFixed(digits);
+    }
+    function fmtPct(v) {
+      const n = num(v);
+      return n === null ? "--" : `${n >= 0 ? "+" : ""}${n.toFixed(2)}%`;
+    }
     function cls(v) { return v > 0 ? "up" : (v < 0 ? "down" : "flat"); }
     function render(symbol) {
       const meta = stocks.find(s => s.symbol === symbol);
       const s = series[symbol];
       summary.innerHTML = `
         <div class="chip"><strong>${meta.name}</strong>${meta.symbol}</div>
-        <div class="chip"><strong>最新收盘价</strong>${meta.latest.toFixed(2)}</div>
-        <div class="chip"><strong>最新日涨跌幅</strong><span class="${cls(meta.pct)}">${meta.pct >= 0 ? "+" : ""}{meta.pct.toFixed(2)}%</span></div>
+        <div class="chip"><strong>最新收盘价</strong>${fmt(meta.latest)}</div>
+        <div class="chip"><strong>最新日涨跌幅</strong><span class="${cls(num(meta.pct) || 0)}">${fmtPct(meta.pct)}</span></div>
         <div class="chip"><strong>交易日数</strong>${s.dates.length}</div>`;
       const traces = [];
       const candles = {
